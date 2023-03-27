@@ -1,14 +1,16 @@
 import Link from "next/link";
-
+import Image from "next/image";
 function Card({ user }: { user: User }) {
   return (
     <>
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="max-w-sm bg-white  hover:shadow-xl  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img
+          <Image
             className="rounded-t-lg"
             src="/docs/images/blog/image-1.jpg"
-            alt=""
+            alt="img"
+            width={50}
+            height={50}
           />
         </a>
         <div className="p-5">

@@ -1,4 +1,4 @@
-type User = {
+interface User {
   id: number;
   name: string;
   username: string;
@@ -20,4 +20,12 @@ type User = {
     catchPhrase: string;
     bs: string;
   };
+}
+
+type Comment = {
+  postId: Number;
+  id: Number;
+  name: String;
+  email: String;
+  body: String;
 };

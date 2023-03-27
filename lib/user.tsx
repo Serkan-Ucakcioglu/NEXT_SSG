@@ -14,3 +14,8 @@ export const getUser = async (id: String) => {
 
   return data;
 };
+
+export const getUserComment = async (id: String) => {
+  const { data } = await api(`/comments?id=${id}`);
+  return data;
+};

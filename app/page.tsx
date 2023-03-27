@@ -11,9 +11,9 @@ export default async function Home() {
   const users = await data;
   return (
     <main className={styles.main}>
-      <div>
+      <div className="flex flex-wrap gap-4">
         {users?.map((user) => {
-          return <Card user={user} />;
+          return <Card user={user} key={user.id} />;
         })}
       </div>
     </main>
