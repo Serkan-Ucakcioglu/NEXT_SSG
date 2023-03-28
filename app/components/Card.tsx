@@ -2,7 +2,7 @@ import Link from "next/link";
 function Card({ user }: { user: User }) {
   return (
     <>
-      <div className="w-[300px] bg-white h-[250px] overflow-auto  hover:shadow-xl  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-[300px] bg-white h-[250px] overflow-auto  hover:shadow-xl  border border-gray-200 rounded-lg shadow hover:shadow-2xl hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700">
         <div className="p-5 flex flex-col">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {user?.name}
