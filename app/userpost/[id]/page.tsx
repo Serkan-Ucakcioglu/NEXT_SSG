@@ -22,7 +22,7 @@ export default async function Detail({
   const [user, posts] = await Promise.all([userData, postData]);
   return (
     <div className="p-8">
-      <h1 className="flex justify-center text-center text-bold text-2xl ">
+      <h1 className="flex mb-4 justify-center text-center text-bold text-2xl ">
         {user?.name}
       </h1>
       <div className="flex flex-wrap gap-4">
