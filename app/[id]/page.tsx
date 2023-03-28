@@ -19,9 +19,11 @@ async function Detail({ params: { id } }: { params: { id: String } }) {
   const [user, posts] = await Promise.all([userData, postData]);
 
   return (
-    <div>
-      <h1>{user?.name}</h1>
-      <div>
+    <div className="p-8">
+      <h1 className="flex justify-center text-center text-bold text-2xl ">
+        {user?.name}
+      </h1>
+      <div className="flex flex-wrap gap-4">
         {posts?.map((post) => {
           return <Post post={post} key={post.id} />;
         })}
