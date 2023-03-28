@@ -1,5 +1,3 @@
-import React from "react";
-
 function Post({ post }: { post: POST }) {
   return (
     <div className="p-4">

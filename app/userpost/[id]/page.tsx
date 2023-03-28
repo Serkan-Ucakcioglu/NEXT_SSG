@@ -25,7 +25,7 @@ export default async function Detail({
       <h1 className="flex mb-4 justify-center text-center text-bold text-2xl ">
         {user?.name}
       </h1>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-2">
         {posts?.map((post) => {
           return <Post post={post} key={post.id} />;
         })}
