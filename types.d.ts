@@ -22,10 +22,9 @@ interface User {
   };
 }
 
-type Comment = {
-  postId: Number;
-  id: Number;
-  name: String;
-  email: String;
+interface POST {
+  userId: Number;
+  id: Key | null | undefined;
+  title: String;
   body: String;
-};
+}

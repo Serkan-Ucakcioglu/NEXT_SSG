@@ -15,7 +15,7 @@ export const getUser = async (id: String) => {
   return data;
 };
 
-export const getUserComment = async (id: String) => {
-  const { data } = await api(`/comments?id=${id}`);
+export const getUserPost = async (id: String) => {
+  const { data } = await api(`/posts?userId=${id}`);
   return data;
 };

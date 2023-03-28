@@ -1,16 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 function Card({ user }: { user: User }) {
   return (
     <>
       <div className="max-w-sm bg-white  hover:shadow-xl  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <Image
+          <img
             className="rounded-t-lg"
-            src="/docs/images/blog/image-1.jpg"
+            src={`https://picsum.photos/${user.id}`}
             alt="img"
-            width={50}
-            height={50}
+            width={200}
+            height={300}
           />
         </a>
         <div className="p-5">

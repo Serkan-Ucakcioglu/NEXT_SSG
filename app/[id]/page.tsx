@@ -1,6 +1,7 @@
 import React from "react";
-import { getAllUsers, getUser, getUserComment } from "../../lib/user";
+import { getAllUsers, getUser, getUserPost } from "../../lib/user";
 import type { Metadata } from "next";
+import Post from "../components/Post";
 
 export async function generateMetadata({
   params: { id },
@@ -13,14 +14,18 @@ export async function generateMetadata({
 
 async function Detail({ params: { id } }: { params: { id: String } }) {
   const userData: Promise<User> = getUser(id);
-  const commentData: Promise<Comment> = getUserComment(id);
+  const postData: Promise<POST[]> = getUserPost(id);
 
-  const [user, comment] = await Promise.all([userData, commentData]);
+  const [user, posts] = await Promise.all([userData, postData]);
 
   return (
     <div>
       <h1>{user?.name}</h1>
-      <h1>{JSON.stringify(comment)}</h1>
+      <div>
+        {posts?.map((post) => {
+          return <Post post={post} key={post.id} />;
+        })}
+      </div>
     </div>
   );
 }

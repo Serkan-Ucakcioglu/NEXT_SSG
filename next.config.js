@@ -2,8 +2,9 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-     typedRoutes: true,
+    typedRoutes: true,
   },
+ 
 };
 
 module.exports = nextConfig;
