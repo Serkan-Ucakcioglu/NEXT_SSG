@@ -19,6 +19,8 @@ export default async function Detail({
 }) {
   const userData: Promise<User> = getUser(id);
   const postData: Promise<POST[]> = getUserPost(id);
+
+  // parallel request
   const [user, posts] = await Promise.all([userData, postData]);
   return (
     <div className="p-8">
