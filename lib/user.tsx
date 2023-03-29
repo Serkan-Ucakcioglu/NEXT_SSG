@@ -11,7 +11,6 @@ export const getAllUsers = async () => {
 
 export const getUser = async (id: String) => {
   const { data } = await api(`/users/${id}`);
-
   return data;
 };
 
