@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 function Card({ user }: { user: User }) {
   return (
     <>
