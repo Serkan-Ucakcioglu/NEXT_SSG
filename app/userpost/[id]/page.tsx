@@ -39,7 +39,6 @@ export default async function Detail({
 export async function generateStaticParams() {
   const data: Promise<User[]> = getAllUsers();
   const users = await data;
-
   return users.map((user) => ({
     id: user.id.toString(),
   }));
