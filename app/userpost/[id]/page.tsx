@@ -36,6 +36,7 @@ export default async function Detail({
   );
 }
 
+//next ssg
 export async function generateStaticParams() {
   const data: Promise<User[]> = getAllUsers();
   const users = await data;
