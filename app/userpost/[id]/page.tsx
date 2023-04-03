@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: { id: String };
 }): Promise<Metadata> {
   const user = await getUser(id);
-  return { title: user.name };
+  return { title: user?.name };
 }
 
 export default async function Detail({
